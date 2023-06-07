@@ -22,4 +22,4 @@ Google Dev tools may struggle with already added bootstrap. If it isnt moving se
 
 there is an inspect function to toggle mobile mode
 
-Breakpoints will tell the column system when to be the different setting, column size etc.
+Breakpoints will tell the column system when to be the different setting, column size etc. breakpoints are often in the middle of the class
