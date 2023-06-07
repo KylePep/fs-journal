@@ -1,6 +1,6 @@
 # Foundations of Web Development
 01. In your own words, why do we use Git?
-    > | ANSWER HERE |
+    > We use github as a way to centralize the location of code projects, for colaberation, backups and tracking.
 
 02. In the terminal, what is the command `mkdir` used for?
     > Make directory
@@ -9,10 +9,11 @@
     > | ANSWER HERE |
 
 04. What is ***specificity*** and how might you use it to your benefit?
-    > | ANSWER HERE |
+    > Specificity is the hierarchy of classification, Higher specificity means it will outlast lowers and showup in the porduct. Meaning you can use it to cover narrower and narrower criteria
 
 05. What problems do you think you could run into if you over-utilized the `!important` feature?
     > | ANSWER HERE |
+    
 
 06. What are the three components that makeup a `CSS` rule? <br> Example:
 
