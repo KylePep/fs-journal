@@ -3,6 +3,11 @@ use debug- recommended, I never used it yesterday I wonder how that could have h
 
 container-row-column
 
+create variables in css 
+:root{
+  --colorname: #f8f7f2;
+}
+
 //main
 container
   row
@@ -23,5 +28,3 @@ custom class
   .glass-box {
     copied from and altered slightly from https://css.glass/
   }
-
-  
