@@ -8,5 +8,3 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 - What would you count as a victory?
 
 
-<!-- general notes from 6/8 -->
-use debug- recommended, I never used it yesterday I wonder how that could have helped.

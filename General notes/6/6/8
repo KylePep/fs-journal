@@ -1,0 +1,27 @@
+<!-- general notes from 6/8 -->
+use debug- recommended, I never used it yesterday I wonder how that could have helped.
+
+container-row-column
+
+//main
+container
+  row
+    ~hero-image~ 
+      custom class .hero-image -- used to add a background image to the whole row
+      using 
+      .hero-image
+      {
+      background-image: url(xxx)
+      height: 50vh
+      background-size: cover;
+      background-positon: x% x%; //is findable within developer tools
+      background-repeat: no-repeat;
+      }
+
+custom class
+  ~glass-box~
+  .glass-box {
+    copied from and altered slightly from https://css.glass/
+  }
+
+  
