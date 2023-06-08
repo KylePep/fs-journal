@@ -40,3 +40,8 @@ custom class
           border-bottom: 3px solid black;
       }
     }
+
+    position-(absolute/relative)
+      you can nest absolutes within relative elements to designate the position of elements regardless of viewport.
+      div~ position-relative
+        p~ position-absolute (top: 50% right 50%)
