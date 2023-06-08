@@ -29,3 +29,4 @@ using at media to make changes to the css with things like screen size. ex // me
 }
 
 position-(absolute/relative) you can nest absolutes within relative elements to designate the position of elements regardless of viewport. div~position-relative p~position-absolute (top: 50% right 50%)
+/* Setting up formatter alt+shift+f */
