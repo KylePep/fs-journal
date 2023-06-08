@@ -28,3 +28,15 @@ custom class
   .glass-box {
     copied from and altered slightly from https://css.glass/
   }
+
+  using at media to make changes to the css with things like screen size.
+  ex// medium is 768px
+
+    @media (max-width: 768px) { // these rules will apply when below this size
+      .specific-class {  //previously set class
+          border-left: none;
+          border-right: none;
+          border-top: 3px solid black;
+          border-bottom: 3px solid black;
+      }
+    }
