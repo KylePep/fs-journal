@@ -41,5 +41,3 @@
     <!-- > NOTE working answer-->
     things like padding and margins will effect the size of the box model.
 
-
-https://github.com/KylePep/CoolSite
