@@ -6,3 +6,7 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 - What did you learn that was a shock or surprise?
 - What are you struggling with?
 - What would you count as a victory?
+
+
+<!-- general notes from 6/8 -->
+use debug- recommended, I never used it yesterday I wonder how that could have helped.
