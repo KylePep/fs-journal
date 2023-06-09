@@ -38,6 +38,5 @@
     >display: flex if a function that gives you the abiltiy to organize the elements in a container, display: property 
 
 11. What `CSS` properties affect the size of a box model?
-    <!-- > NOTE working answer-->
     Margin border content and padding
 
