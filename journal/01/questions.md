@@ -39,5 +39,5 @@
 
 11. What `CSS` properties affect the size of a box model?
     <!-- > NOTE working answer-->
-    things like padding and margins will effect the size of the box model.
+    Margin border content and padding
 
