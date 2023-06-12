@@ -1,5 +1,9 @@
 < !-- general notes from 6/8 -->use debug- recommended,
-I never used it yesterday I wonder how that could have helped. container-row-column create variables in css:root {
+I never used it yesterday I wonder how that could have helped. 
+
+container-row-column 
+
+create variables in css:root {
   --colorname: #f8f7f2;
 }
 
@@ -28,5 +32,6 @@ using at media to make changes to the css with things like screen size. ex // me
   }
 }
 
-position-(absolute/relative) you can nest absolutes within relative elements to designate the position of elements regardless of viewport. div~position-relative p~position-absolute (top: 50% right 50%)
+position-(absolute/relative) you can nest absolutes within relative elements to designate the position of elements regardless of viewport in relation to the partent element.
+ div~position-relative p~position-absolute (top: 50% right 50%)
 /* Setting up formatter alt+shift+f */
