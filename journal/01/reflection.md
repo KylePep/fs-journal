@@ -13,4 +13,4 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 - What would you count as a victory?
     Participating, I have asked some questions and was able to submit moody kittens, I was so worried, distraught about having done all that work and not following through due to my own limitations of knowledge and experience. The team at Codeworks helped though, they helped me fix a rather large issue I created for myself and I was able to submit, get credit and get the discount. I wouldnt be able to say that if I hadnt asked for help.
 
-
+- Checkpoint notes, I got an 10/11. My site-clone was nearly perfect, however I forgot to add contianer-fluid. This casued my website to have a slight side scroll. The class container-fluid could have easily been added to the header, main and footer.
