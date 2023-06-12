@@ -12,6 +12,7 @@ Bootstrap grid system, helps elements stack. desktop - phone
 *Good documentation*  
 
 Bootstrap: Grid system
+<!-- NOTE you missed a point on your checkpoint because you forgot to create the container, Remember to create the container in which the rows and columns go -->
   Container 
     Rows stretch across horizontally -------- (Rows by default) a row can contain 12 positions
     Column (col1), they can contain html (these columns can be 1-12, and take up relevant space)
