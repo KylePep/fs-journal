@@ -5,7 +5,7 @@
 
 02. What is the definition of a function?
 
-    > | ANSWER HERE |
+    > functions are subprograms designed to perform a specific task.
 
 03. What are the `SOLID` principles?
 
