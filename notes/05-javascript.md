@@ -28,7 +28,11 @@ New File
             ${} is what allows for variables to be called with in the string.
 
         You can utilize '' in the string by using "" instead.
-        You can utilize "" in the string by using `` instead.
+        You can utilize "" in the string by using `` instead. 
+
+<!-- SECTION INJECT TO HTML -->
+        let secretCodeElement= document.getElementById('secret-code') 
+        secretCodeElement.innerText = userInput
 
 <!-- SECTION BOOLEANS -->
          let skyIsBlue = true
