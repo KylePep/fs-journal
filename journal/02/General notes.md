@@ -63,3 +63,9 @@ function getClue(){
     clueElement.innerHTML =  '<p> The animal is a mammal</p>'
     }
 }
+
+<!-- SECTION filter meat eaters --> ---------------- .includes lets you search through the array within the object
+function filterMeatEaters(){
+  let meatEaters = animals.filter(animal => animal.diet.includes('meats'))
+  drawAnimals(meatEaters)
+}
