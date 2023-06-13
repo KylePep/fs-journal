@@ -34,3 +34,32 @@ function drawAnimals() {
   })
   const animalLineupElement =  document.getElementbyId('animalLineup')
 }
+
+<!-- SECTION find mammals -->
+function drawMammals(){
+  let mammals = animals.filter(animal => animal.mammal)  ---- creating a new array that has only mammals inside
+
+}
+
+<!-- SECTION accuse -->
+function accuseAnimal(){
+  const accusedAnimal = window.prompt("WHO DUNNIT")
+  
+  let murderer = findMurderer()
+  if (murderer.emoji == accusedAnimal){
+    window.alert(You did it)
+  } else {
+    window.alert(You didnt do it)
+    getClue()
+  }
+}
+
+<!-- SECTION  Get murderer clue -->
+function getClue(){
+  let murderer = findMurderer()
+  const clueElement = document.getElementById('clues')
+
+  if(murderer.mammal){
+    clueElement.innerHTML =  '<p> The animal is a mammal</p>'
+    }
+}
