@@ -114,6 +114,17 @@ New File
         let filterFighters = zFighters.filter(fighter => fighter.hasTail == false) --- this creates a new array called filterFighters with only -------------------------------------------------------------------------------fighters that dont have tails
 <!-- NOTE  SORT-->
         let sortedFighters = zFighters.sort((fighter1,Fighter2) => fighter1.powerLevel- fighter2.powerLevel) This should sort lowest to hightes -----------------------------------------------------------------------------------------------------powerLevel
+<!-- NOTE Map-->
+        let number = [1,2,3,4]
+        let changedNumbers = numbers.map(number => number * 2) ------- Look at each number and change them
+        console.log('changed',changedNumbers); -----------This will yield [2,4,6,8]
+
+<!-- NOTE weird -->
+        let number1 = 3;
+        let number2 = number1;
+        number2 *= 2;
+        console.log('number 1:', number1);  ---3
+        console.log('number 2:', number2);  ---6
 
 
 
