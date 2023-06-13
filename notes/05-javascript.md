@@ -74,6 +74,48 @@ New File
 
 <!-- SECTION ARRAYS --> 
         let shoppingList = ['apple', 'bagel', 'salt', 'pepper']
+<!--SECTION ARRAY OF OBJECTS  -->
+        let zFighters = [
+          {
+            name: 'Goku';
+            race: 'Saiyan';
+            hasTail: false;
+            powerLevel: 9001
+            skills: ['Kamehameha, Dragonfist']
+          }
+          {
+            name: 'Piccolo';
+            race: 'Namekian';
+            hasTail: false;
+            powerLevel: 6000
+            skills: ['Special Beam Cannon, Ki blast']
+          }
+          {
+            name: 'Gohan';
+            race: 'half-breed;
+            hasTail: true;
+            powerLevel: 1200
+            skills: ['Kamehameha, Ki blast']
+          }
+        ]
+<!--  NOTE FOR LOOP -->
+        for(let i = 0, i < zFighters.length, i++) {
+          let zFighter = zFighters[i]
+          console.log('🐲', zFighter) --- This will yield the different objects within the array, name, race, hasTail, skills
+          console.log('🐲', zFighter.name) ---- This will yield just the names of the different object positions.
+        }
+<!-- NOTE FOR EACH -->
+        zFighter.forEach(zFighter => console.log('🐲 for each!',zFighter)) yeilds essentially the same information from the above for loop
+<!-- NOTE  FIND-->
+        let saiyanFighter = zFighters.find(zFighter => zFighter.race = 'Saiyan') -- Goku
+
+        *** let deadFighter = zFighters.find(zFighter => zFighter.skills != 'Ki blast') -- This does not work
+<!-- NOTE  FILTER-->
+        let filterFighters = zFighters.filter(fighter => fighter.hasTail == false) --- this creates a new array called filterFighters with only -------------------------------------------------------------------------------fighters that dont have tails
+<!-- NOTE  SORT-->
+        let sortedFighters = zFighters.sort((fighter1,Fighter2) => fighter1.powerLevel- fighter2.powerLevel) This should sort lowest to hightes -----------------------------------------------------------------------------------------------------powerLevel
+
+
 
  <!-- SECTION WEIRD STUFF -->
         let nothing = null
@@ -85,3 +127,8 @@ New File
         }
 
         can call functions from the console ----sayHello()
+
+
+<!--SECTION  -->
+
+<!--SECTION  -->
