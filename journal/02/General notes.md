@@ -94,14 +94,13 @@ function drawcart(){
       stringOfMenuItemHTML += `
         li  
           div class etc
-            span ${menuItem.quantity},${menuItem.name} span
-            span ${menuItem.price * menuItem.quantity} span
+            span ${menuItem.name} x${menuItem.quantity} span
+            span ${menuItem.price.toFixed(2)} span
           div
         li
       `
 
-    }
-  })
+    })
 
   const cartElement = document.getElementById('cart')
   cartElement.innHTML = stringOfMenuItemHTML
@@ -117,3 +116,25 @@ function drawcart(){
   '
 }
 
+function drawTotal() {
+  let cartTOtalElement = document.getElementById('cartTotal')
+
+  let cartSum = 0
+
+  menu.forEach(menuItem => {
+    cartSum += (menuItem.price * menuItem.quantity)
+  })
+
+  cartTOtalElement.innerText = cartSum.toFixed(2).toString()
+}
+
+function checkOut(){
+  const wantsToCheckOut = window.confirm("yes,checkout?")
+
+  if (!wantsToCheckOut) {
+    return
+  } else {
+    menu.forEach(menuItem => menuItem.quantity = 0)
+  }
+  drawCart()
+}
