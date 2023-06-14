@@ -87,16 +87,25 @@ overflow-y  auto
 
 function drawcart(){
 
-  let stringOfMenuItems = ''
+  let stringOfMenuItemHTML = ''
 
   let cartItems= menu.forEach(menuItem => {
     if(menuItem.quantity > 0){
-      stringOfMenuItems += menuItem.name
+      stringOfMenuItemHTML += `
+        li  
+          div class etc
+            span ${menuItem.quantity},${menuItem.name} span
+            span ${menuItem.price * menuItem.quantity} span
+          div
+        li
+      `
 
     }
   })
 
   const cartElement = document.getElementById('cart')
+  cartElement.innHTML = stringOfMenuItemHTML
+
   <!-- NOTE /*html*/ --> is a text decorator that makes the text look like html
   cartElement.innerHtml = /*html*/'
         -----html element----
