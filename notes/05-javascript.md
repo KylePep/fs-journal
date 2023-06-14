@@ -71,7 +71,7 @@ New File
             console.log(dog['dogName']) -- Satch
 
         ** Objects in javaScript does not care about the order of key value pairs **
-
+<!-- STUB -->
 <!-- SECTION ARRAYS --> 
         let shoppingList = ['apple', 'bagel', 'salt', 'pepper']
 <!--SECTION ARRAY OF OBJECTS  -->
@@ -125,8 +125,8 @@ New File
         number2 *= 2;
         console.log('number 1:', number1);  ---3
         console.log('number 2:', number2);  ---6
-
-
+<!-- !SECTION -->
+<!-- STUB -->
 
  <!-- SECTION WEIRD STUFF -->
         let nothing = null

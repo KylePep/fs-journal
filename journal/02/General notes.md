@@ -1,5 +1,5 @@
 
-
+<!-- STUB -->
 <!-- SECTION ANIMAL MURDER MYSTERY -->
 math.random() ----return a number 0-1 ex .57
 math.floor() ----- round up or down
@@ -69,3 +69,7 @@ function filterMeatEaters(){
   let meatEaters = animals.filter(animal => animal.diet.includes('meats'))
   drawAnimals(meatEaters)
 }
+
+<!-- STUB -->
+
+<!-- SECTION PASTAS -->
