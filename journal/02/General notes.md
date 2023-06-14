@@ -73,3 +73,38 @@ function filterMeatEaters(){
 <!-- STUB -->
 
 <!-- SECTION PASTAS -->
+
+------Adding selected menu items to html elements
+
+<!-- NOTE auto scroll with in an element //really tall column -->
+------------Auto scroll portion of the site
+max-height: xyzvh
+overflow-y  auto
+
+<Ul id= "cart"> -------------Unordered list
+<li><li> -----------List item
+</ul>
+
+function drawcart(){
+
+  let stringOfMenuItems = ''
+
+  let cartItems= menu.forEach(menuItem => {
+    if(menuItem.quantity > 0){
+      stringOfMenuItems += menuItem.name
+
+    }
+  })
+
+  const cartElement = document.getElementById('cart')
+  <!-- NOTE /*html*/ --> is a text decorator that makes the text look like html
+  cartElement.innerHtml = /*html*/'
+        -----html element----
+        div
+          p
+            words
+          p
+        div
+  '
+}
+
