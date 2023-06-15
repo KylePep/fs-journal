@@ -138,3 +138,19 @@ function checkOut(){
   }
   drawCart()
 }
+
+<!-- SECTION ZOO KEEPER -->
+<!-- 
+  Game has moving elements that bounce within a box
+  Game has a step system that -- happiness over time (5sec)
+  There are mulitple elements
+  system evaluates average happiness and returns a ranked paycheck
+ -->
+ setting flex to column and space between
+ flex-grow will have the element take up all of the remaining flex space -- on the middle element--
+
+user-select: none; ---------this will disable selection to the class or element it is called to in css
+
+ .class > element {} -----------This will select the first child element underneath the element with the given class
+ .class:hover --------------This will enable css to do specific things on hover
+    cursor: crosshair; ----------- will change the cursor to crosshair on hover
