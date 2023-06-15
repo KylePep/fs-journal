@@ -154,3 +154,23 @@ user-select: none; ---------this will disable selection to the class or element 
  .class > element {} -----------This will select the first child element underneath the element with the given class
  .class:hover --------------This will enable css to do specific things on hover
     cursor: crosshair; ----------- will change the cursor to crosshair on hover
+
+    creating array of objects
+    const array = [
+      {
+        name: 'batman',   ---------------important that an objects properties are seperated by commas
+        emoji: '🦇',
+        hunger: 100,
+        isAlive: true
+      }
+      {
+        name: 'robin, 
+        emoji: '🐦',
+        hunger: 40,
+        isAlive: true
+      }
+    ]
+
+  let animalElem = document.getElementById('batman')
+  let animalParagraph = animalElem.querySelector('p') ------- This will return the p tags withinn the element with Id ='batman'
+  let animalParagraph = animalElem.querySelector('p > span') ------- This will return the first span within a p tag inside Id = 'batman'
