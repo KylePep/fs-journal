@@ -160,12 +160,14 @@ user-select: none; ---------this will disable selection to the class or element 
       {
         name: 'batman',   ---------------important that an objects properties are seperated by commas
         emoji: '🦇',
+        mood: '😊'
         hunger: 100,
         isAlive: true
       }
       {
         name: 'robin, 
         emoji: '🐦',
+        mood: '😊'
         hunger: 40,
         isAlive: true
       }
@@ -174,3 +176,48 @@ user-select: none; ---------this will disable selection to the class or element 
   let animalElem = document.getElementById('batman')
   let animalParagraph = animalElem.querySelector('p') ------- This will return the p tags withinn the element with Id ='batman'
   let animalParagraph = animalElem.querySelector('p > span') ------- This will return the first span within a p tag inside Id = 'batman'
+
+  setInterval(code, delay) ---- will run a function at delay miliseconds
+    setInterval(()=>{console.log('interval ran');},1000) ---- this will show 'interval ran' every second
+
+    setInterval(decreaseHunger,1000)  ------ do not invoke, it is being invoked by the setInterval
+
+    if(animal.hunger > 80){
+      animal.mood = '😊'
+    } else if (animal.hunger > 60) {
+      animal.mood = '😐'
+    }  else if (animal.hunger > 30) {
+      animal.mood = '☹️'
+    } else if (animal.hunger >= 0) {
+      animal.mood = '😨'
+    } else (animal.hunger < 0) {
+      animal.mood = '🧑‍🌾'
+    }
+
+    let money = 0
+
+    function getPaid(){
+        animals.forEach(animal => {
+          switch () {
+            case xyz:
+              console.log('run-xyz switch code')
+              break;
+
+            case '😊':
+              money++
+              break;
+
+            default:
+              break;
+
+          }
+
+
+        })
+    }
+
+    setInterval(,6000)
+
+    body oncontextmenu= "return false" --- this disables right clicking to the body
+
+    oncontextmenu="" is right click   ----- this enbales a function that right clicks
