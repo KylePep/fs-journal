@@ -35,8 +35,8 @@
     }
     ```
 
-    > you.friends += them
-        them.friends += you
+    > you.friends.push(them)
+    them.friends.push(you)
 
 06. Give an example of a JavaScript `Conditional`:
 
