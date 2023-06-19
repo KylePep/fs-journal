@@ -52,3 +52,19 @@ bcw create ------------------Do this with the file destination ie, 2023 - week 3
 <!-- NOTE  Whenever possible use intellicense to create the import function-->
     import {variable} from "xyz.js"
   If you bet an error 404 you might be missing a .js somewhere
+
+  export function sayHello(){
+    console.log('helloWorld')
+  }
+
+  import |above|
+
+  Classes - big fancy object, Good intellicense, Store functions, export classes out, Bundle like things together and send it.-
+
+  Method is a function written inside of an object
+
+  MVC follows V -view, C -controller, S- Service, M- models flow
+
+  The service is the only thing that can change out values***  Call a change in values
+
+  Controller talks to the Service for the sake of security
