@@ -24,8 +24,12 @@
   > | ANSWER HERE |
 
 07. What is the purpose of the `MVC` pattern?
-  
-  > | ANSWER HERE |
+  <!-- STUB -->
+    Model: The Model handles data representation
+    View: The View handles data visualization
+    Controller: The Controller handles User Input and updates the View based on changes in the Model (🧠 brains of the operation)
+  <!-- NOTE This may need expanding -->
+  > The purpose of the `MVC` pattern is to keep everything organized...?
 
 08. What is the job of the `Controller` in the `MVC` Pattern?
   
@@ -36,5 +40,9 @@
   > | ANSWER HERE |
 
 10. What is the job of the `Model` in `MVC`?
-  
-  > | ANSWER HERE |
+
+    <!--STUB Ripped do not leave -->
+  > the word “modules” refers to small units of independent, reusable code.
+
+    In simpler terms, modules help you to write code in your module and expose only those parts of the code that should be accessed by other parts of your code.
+    <!-- NOTE Expand on this later -->
