@@ -1,27 +1,30 @@
 # Application Architecture, MVC Design Pattern
 01. What are the Pillars of Object Oriented Programming (`OOP`)?
   
-  > | ANSWER HERE |
+  > Encapsulation, Inheritance, Polymorphism
+  Encapsulation - objects being devoted to a single task instead of everything
+  Inheritance- properties of an object are passed down and do not need to be repeatedly initialized
+  Polymorphism- treat the same object as different things depending on how it is needed at different times.
 
 02. How does `export` differ from `export default`?
   
-  > | ANSWER HERE |
+  > default exports export only a single object function or variable, a regular export can export multiple values
 
 03. What is Encapsulation?
   
-  > | ANSWER HERE |
+  > is walling of the parts of an applications that you do not wish to expose to the public interface.
 
 04. What are some of the benefits of the `Proxy` object that we are using in our structure for applications?
   
-  > | ANSWER HERE |
+  > Allowing an inbetween of user input and commands, to help keep certain parts of the application private, redirecting get commands for example.
 
 05. What the difference between a `class` and an instance of a `class`?
   
-  > | ANSWER HERE |
+  > class is the blueprint that a then instance of class is made from. the object is made from the class and instance describes their relationship
 
 06. What is a computed Property?
   
-  > | ANSWER HERE |
+  >an expression in brackets [], that will be computed and used as the property name.
 
 07. What is the purpose of the `MVC` pattern?
   <!-- STUB -->
@@ -30,19 +33,17 @@
     Controller: The Controller handles User Input and updates the View based on changes in the Model (🧠 brains of the operation)
   <!-- NOTE This may need expanding -->
   > The purpose of the `MVC` pattern is to keep everything organized...?
+  and to keep aspects of the application encapsulated and therefor secure.
 
 08. What is the job of the `Controller` in the `MVC` Pattern?
   
-  > | ANSWER HERE |
+  > The controller updates the screen and handles user inputs
 
 09. What is the job of the `Service` in `MVC`?
   
-  > | ANSWER HERE |
+  > Service handles the mutation of values and writing directly to the AppState
 
 10. What is the job of the `Model` in `MVC`?
 
-    <!--STUB Ripped do not leave -->
-  > the word “modules” refers to small units of independent, reusable code.
-
-    In simpler terms, modules help you to write code in your module and expose only those parts of the code that should be accessed by other parts of your code.
-    <!-- NOTE Expand on this later -->
+   
+  > the model is a blueprint for data in accross the application a fancy object
