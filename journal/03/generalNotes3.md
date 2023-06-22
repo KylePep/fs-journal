@@ -33,4 +33,29 @@ Inside of car class
               return ``
             }
 
-<!-- SECTION Modal -->
+
+Turinary operator
+
+carData.ownedByGrandma = cardData.ownedByGrandma == 'on' ? true : false
+
+using await
+  make it async
+  async deletCar(carId){
+
+  }
+
+Splice
+
+
+
+<!-- ANCHOR Thursday notes -->
+
+<!-- SECTION Redacted notes -->
+Mic likes to start with a model, its contrustor fleshed out and  a simple getter to draw to the screen.
+
+Turinary is a one line if statement
+
+variable = (do we have that variable) ? (yes variable = that variable) : (no do something else)
+
+Mic likes index => router => Controller => Service => AppState => Model
+    This is reminicent of the flow of data
