@@ -59,3 +59,42 @@ variable = (do we have that variable) ? (yes variable = that variable) : (no do 
 
 Mic likes index => router => Controller => Service => AppState => Model
     This is reminicent of the flow of data
+
+Take an string array and turn it into an list of words
+
+          let arr = this.report.split(' ')  ----------split the string on 'space' character
+
+get computedRedactedReport() {
+          let mapped = arr.map(word => {
+            if(_badwords.includes(word.toLowerCase())) {
+              return '⬛⬛⬛'
+            } return word
+          })
+          //return mapped -------------------This yields an array of strings
+              return mapped.join(' ' ) ------------This yields an array of a single string
+          }  
+
+Build small forms, makes testing easier
+
+... is a spread operator, this takes an array and removes the brackets essentially
+
+let arr = [1,2,3]
+console.log([...arr,4])---------this yields [1,2,3,4]
+console.log([4,...arr])---------this yields [4,1,2,3]
+
+init(){
+  this.cases = loadState('cases',[Case]) -------------- The brackets on Case are necissary because when it gets saved to local storage it looses its class
+                                        -----------------This lets you leave in your initialization information.
+}
+
+let newContent = document.getElementById('case-content').value
+casesService.saveCase(newContent)
+saveCase(newContent){
+  const theCase = AppState.activeCase
+  theCase.report = newContent
+
+  _saveState()
+}
+
+inside of html moving away from an element is call onblur
+    onblur= "app.CasesController.lockCase()"
