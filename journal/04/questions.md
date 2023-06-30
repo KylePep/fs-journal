@@ -9,7 +9,8 @@
 
 03. What does *REST* stand for, and in simple terms what does it mean??
 
-  > Representational State Transfer  *** expand on this
+  > Representational State Transfer  *** Restful Api's use HTTP methods to navigate resources via URL-encoded parameters.
+  website.co/api/pokemon/locations --- This structure is an example of RESTful
 
 04. What is a callback / higher order function?
 

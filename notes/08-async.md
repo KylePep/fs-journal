@@ -283,3 +283,30 @@ create generic controller
   function to send the active spell down to the service
 
 <!-- NOTE SandboxSpellsService -->
+
+
+<!-- SECTION -->
+in the axios service if an Api requires a key
+within the export const{
+  instead of withCredentials: true
+  paramas: { api_key: ''}
+}
+
+<!-- NOTE bracket notation-->
+instead of object.value.regular-image which wont work
+object.value['regular-image']
+
+<!-- NOTE changing style with js -->
+
+function _drawPicture(){
+  const picture = AppState.picture
+
+  const htmlBody = document.body
+
+  htmlBody.style.backgroundImage = 'url(${picture.imgUrl})
+}
+
+transition: 1s ease-in-out;
+this can help elements that have pseudo classes to change colors and stuff without it being so jarring
+
+class="on-hover" ----- premade by codeworks hides things inside an element, shows them when hovering on the parent
