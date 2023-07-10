@@ -3,6 +3,10 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 
 ## Prompts
 - What went well this week?
+  The wednesday lab is always a bit tricky I feel like its scope is often larger and more ambiguous than the checkpoint, The check point feels like ive completed it well. It is yet to be graded.
 - What did you learn that was a shock or surprise?
+  Um, Api's are pretty cool, I guess even with the way I'm pretty good at guessing how things mostly work I hadent really imaginged the actuall mechanics of an api
 - What are you struggling with?
-- What would you count as a victory?
+  I dont feel like im particularlly struggling with much other than spelling. jeez.
+- What would you count as a victory? 
+  I'm doing this. I keep doing this and I will complete it.
