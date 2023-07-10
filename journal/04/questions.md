@@ -1,7 +1,7 @@
 # Understanding Asynchronous Code, and API's
 01. What is the difference between `asynchronous` code and `synchronous` code?
 
-  > asynchronous code has multiple threads that run in tandum, whereas synchronous code runs one operation at a time.
+  > synchronous code has multiple threads that run in tandum, whereas asynchronous code runs one operation at a time.
 
 02. What is an event listener?
 
