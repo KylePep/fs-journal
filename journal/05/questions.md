@@ -9,7 +9,7 @@
 
 03. What does `ORM` stand for? Which `ORM` do we use when interacting with MongoDB
 
-  > Object-relational mapping ****what orm do we use****
+  > Object-relational mapping, Mongoose
 
 04. Which two `HTTP` request types include a body?
 
@@ -25,7 +25,7 @@
 
 07. What is middleware?
 
-  > middleware is software that different applications use to communicate with each other. Like a middleman, helps make the information useable by the other
+  > middleware is software that different applications use to communicate with each other. Like a middleman, helps make the information useable by the other -- mongoose
 
 08. The ______ pipeline delivers information from the client while the ______ pipeline returns it. Fill in the blanks. 
 
