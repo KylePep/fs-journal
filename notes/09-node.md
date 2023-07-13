@@ -71,3 +71,56 @@ express-mvc
 
 UML unified modeling language
 
+<!-- SECTION HACKATHON NOTES -->
+<!-- BIRD BRAIN LECTURE -->
+
+-filling out .env with information saved to slack - change out the project name to save all details to the proper part of the api
+-need to pick a persons auth creds and api string
+-fill out client env with information from the server .env
+
+<!-- STUB Model -->
+-starting with model- creating a bird because the bird watcher needs a birdId
+-pulling from the figma, creating all of the different variables
+      ie- name: {type: String, required: true, minlength: 3, maxlength: 75}
+      --- size: {type: String, enum: ['small','medium','large'], default 'small'} --------- on figma type string enum-
+      --- reporterId: {type: Schema.Types.ObjectId, required: true, ref:'Account'} ref is referring to the string within dbcontext
+
+<!-- STUB Controller -->
+<!-- ANCHOR GET BIRDS -->
+*passing down req.query 
+-Creating get for the birds from the api
+-req res next, try catch and send await to service 
+-return res.send(birds)
+<!-- ANCHOR use Auth0 -->
+-.use(Auto0Provider,getAuthorizedUser)
+<!-- ANCHOR CREATE BIRDS -->
+-same as above but with const birdData = req.body and birdData being sent to service
+
+<!-- STUB Service -->
+<!-- ANCHOR GET BIRDS -->
+*.find({query})
+-adding birds to the dbContext
+-const birds = await dbContext.Birds.find()
+-return birds
+<!-- ANCHOR CREATE BIRDS -->
+-birdData.reporterId = req.userInfo.id
+-const birds = await dbContext.Birds.create(birdData)
+-return bird
+
+<!-- STUB POSTMAN -->
+<!-- ANCHOR Query -->
+{{BASEURL}}/api/birds?size=small
+{{BASEURL}}/api/birds?size=small&canFly=true
+
+
+<!-- SECTION Partner Coding-->
+-working on one repository
+-writing within the same application
+-setting => collab and teams => type in each other github username => add as admin
+--user should now have notification and email of the request
+-clone, DO NOT FORK
+*will need to create the .env after cloning as it gets ignored by gitHub with gitIgnore
+*open terminal, server folder => **npm i** to install dependencies
+
+
+<!-- SECTION Savanah Client Side -->

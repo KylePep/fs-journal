@@ -29,12 +29,12 @@
 
 08. The ______ pipeline delivers information from the client while the ______ pipeline returns it. Fill in the blanks. 
 
-  > | ANSWER HERE |
+  > request pipeline and response pipeline
 
 09. Demonstrate the pattern that is used to include a request query with the client's `HTTP` request providing the property `tag` and the value `winter`.
 
-  > | ANSWER HERE |
+  > http://localhost:3000/api/seasons/winter
 
 10. What is a ***virtual property***?
 
-  > | ANSWER HERE |
+  > a virtual property is a property that 
