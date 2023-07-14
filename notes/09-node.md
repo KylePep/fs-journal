@@ -123,4 +123,54 @@ UML unified modeling language
 *open terminal, server folder => **npm i** to install dependencies
 
 
+
+
 <!-- SECTION Savanah Client Side -->
+
+<!-- SECTION Jeremy server side -->
+
+<!-- STUB -->
+-inside bird server model
+
+birdSchema.virtual('reporter', {
+  localField: 'reporterId' -------lives on this bird server model
+  foreignField: '_id'-------lives on account model
+  justOne: true, ---------will return an object
+  ref:  'Account' --------what is the other thing we are referencing
+})
+
+birdSchema.virtual('birdWatcherCount', {
+  localField: '_id' 
+  foreignField: 'birdId'
+  ref:  'BirdWatcher',
+  count: true
+})
+
+at the end of const birds find().populate('reporter', 'name picture')
+
+it cant get two different requests at once so it will need a second await if you are using another populate
+
+watcher model 
+birdId: {type: Schema.Types.ObjectId, required: true, ref: 'Bird'}
+watcherId: {type: Schema.Types.ObjectId, required: true, ref: 'Account'}
+
+BirdWatcherSchema.index({birdId: 1, watcherId: 1}, {unique: true})
+
+BirdWatcherSchema.virtual('watcher', {
+  localField: 'watcherId',
+  foreignField: '_id',
+  justOne: true,
+  ref:'Account'
+})
+
+BirdWatcherSchema.virtual('bird',{
+  localField: 'birdId',
+  foreignField: '_id',
+  justOne: true,
+  ref:'Bird'
+})
+
+** cant populate on a create
+
+await birdWatcher.populate('bird')
+await birdWatcher.populate('watcher', 'name picture')

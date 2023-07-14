@@ -37,4 +37,4 @@
 
 10. What is a ***virtual property***?
 
-  > a virtual property is a property that 
+  > a virtual property is a property that establishes a relationship with one part of the database to another part of the database
