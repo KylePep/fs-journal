@@ -46,3 +46,11 @@ retrieve cheese at appstate
 cheese:AppState.cheese-------------Appstate needs to import
 ---below will be the reactive way to use the AppState.cheese value---
 cheese: computed(() => {return AppState.cheese})
+
+doing upgrades variable with in the HomePage.vue return
+using computed on upgrades
+upgrades: computed(()=> AppState.upgrades)
+
+@click is v-directive of v-on:click wich is a v form of onclick
+
+< span v-if= "autoPower > 0"> ------- this will prevent the span it is in from rendering until autoPower is over 0
