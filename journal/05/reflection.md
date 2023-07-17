@@ -3,6 +3,10 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 
 ## Prompts
 - What went well this week?
+The hackathon was pretty successful, My team worked very well together.
 - What did you learn that was a shock or surprise?
+There are no 'gimmies' even in databases where the path ways seem self explanatory
 - What are you struggling with?
+Sleep, I struggle to stay awake in that awfully hot, stuffy room. I also need better sleep.
 - What would you count as a victory?
+The hackathon, that was really cool. And now we have a really cool application to show off. 

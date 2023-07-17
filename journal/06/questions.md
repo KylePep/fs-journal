@@ -1,11 +1,13 @@
 # Single Page Applications with Vue
 01. What is the entrypoint of an application?
 
-  > | ANSWER HERE |
+  > main.js
 
 02. What is the difference between a vue `component` and `page`?
 
-  > | ANSWER HERE |
+  > A page is a part of the path in the routes in the index, creating the "page" or visible field on the selected portion of the website, a component is a portion of the web page exported out to another file that has all the parts necessary to create a function html and javascript.
+
+  Whole- -part
 
 03. What is ***Component-Based Architecture***?
 
@@ -13,7 +15,7 @@
 
 04. What are the three tags that make up a Vue component?
 
-  > | ANSWER HERE |
+  > <template></template>,<script></script>,<style></style>
 
 05. What are ***lifecycle hooks***? What are lifecycle hooks used for?
 
@@ -25,11 +27,11 @@
 
 07. What is the difference between the `AppState` and the state object within a component?
 
-  > | ANSWER HERE |
+  > The AppState is were all of the data should be stored for the application, the state is where the javascript runs within the scope
 
 08. What is the responsibility of `Services` in our Vue projects?
 
-  > | ANSWER HERE |
+  > The same, it is still where information goes to be changed and then sent up to the AppState.
 
 09. What are ***props*** and how are they used? Provide an example
 
@@ -37,4 +39,4 @@
 
 10. What is the Vue method used to create watchable objects such as `state` or `AppState`?
 
-  > | ANSWER HERE |
+  > reactive, ------ may need to expand
