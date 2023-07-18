@@ -117,3 +117,51 @@ inside javascript section inside export default{} outside of setup(){}
 props:{
   movieProp: {type: Movie, required: true}
 }
+
+<!-- STUB Router Link -->
+
+<router-link :to="{ name: 'Movie', params: { movieId: movieProp.id}}"
+
+MovieDetailsPage.vue
+
+
+router.js
+  const routes = [{
+    {...},
+    {...},
+    {
+      path: '/movie/:movieId',
+      name: Movie,
+      component: loadPage(MovieDetailsPage)-----same as component file name
+    }
+    setup() {
+
+      const route = useRout()
+
+      asunc function getMovieById(){
+        try {
+          const movieId = route.params.movieId
+          logger.log(route.params.movieId)
+          await moviesService.getMovieById(movieId)
+        } catch (error){
+          pop.error(error)
+        }
+    }
+
+      onMounted(() => {
+        getMovieById()
+      })
+
+      return {}
+    }
+  }]
+
+
+  ---service---
+
+  async getMovieById(movieId){
+    const res  = await movieApi.get(`movie/${movieId}`)
+
+  }
+
+  --movie?.title-- if the movie isnt loaded the ? will prevent javascript from drilling into undefined and breaking it
