@@ -35,7 +35,7 @@
 
 09. What are ***props*** and how are they used? Provide an example
 
-  > | ANSWER HERE |
+  > Props are a child function that pulls information down from a parent to a child like when v-for-ing over a collection
 
 10. What is the Vue method used to create watchable objects such as `state` or `AppState`?
 
