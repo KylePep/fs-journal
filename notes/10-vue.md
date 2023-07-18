@@ -165,3 +165,17 @@ router.js
   }
 
   --movie?.title-- if the movie isnt loaded the ? will prevent javascript from drilling into undefined and breaking it
+
+  <!-- SECTION Search -->
+
+  path: '/search',
+  name: 'Search',
+  component: loadPage('SearchPage')
+
+  <router-link :to="{ name: 'Search', params: { movieId: movieProp.id}}"
+
+  <!-- STUB v-model is a two way bind, pulls what is saved in the setup/return and pushes back in that is updated through like an input -->
+
+  @submit.prevent="getMoviesByQuery()" works the same as event.prevent default but can be used in the html portion of Vue
+
+  
