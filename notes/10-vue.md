@@ -178,4 +178,8 @@ router.js
 
   @submit.prevent="getMoviesByQuery()" works the same as event.prevent default but can be used in the html portion of Vue
 
+
+
+  <!-- SECTION GraigsList -->
+
   
