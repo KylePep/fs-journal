@@ -182,4 +182,10 @@ router.js
 
   <!-- SECTION GraigsList -->
 
+  <!-- SECTION galleries -->
+
+  const route = useRoute()
+
+  const profileId = route.params.profileId
+
   
