@@ -11,7 +11,7 @@
 
 03. What is ***Component-Based Architecture***?
 
-  > | ANSWER HERE |
+  > An architecture based on page-component structuring, big to small, with components that can be reached from multiple places
 
 04. What are the three tags that make up a Vue component?
 
