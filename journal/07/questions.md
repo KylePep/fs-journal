@@ -2,7 +2,8 @@
 
 1. Describe the two ways to bind Data in Vue?
 
-  > | ANSWER HERE |
+  > with the colons :src="data.data" -- Binding the attribute to the data
+  v-model  -- **Expand**
 
 2. The `SPA` acronym stands for what?
 
@@ -14,7 +15,7 @@
 
 4. What does the `onMounted` method in Vue do?
 
-  > | ANSWER HERE |
+  > When the component loads it does the actions stored inside
 
 5. What is the `v-model` attribute in Vue for, and when might you use it?
 
@@ -26,11 +27,11 @@
 
 7. Which Vue attributes(directives) could you use to conditionally render elements on a page?
 
-  > | ANSWER HERE |
+  > V-if -- You can attach this to a computed variable and when that value returns false it wont render the contents
 
 8. What is the purpose of the `key` attribute when using `v-for` on an element?
 
-  > | ANSWER HERE |
+  > The key attribute is basically the i in a for loop. It makes sure not to interact with the same set of data over again and makes sure it doesnt have to check deeper into the data to verify it has in fact made the change.
 
 9. What is the `<slot>` element and what is it used for?
 
