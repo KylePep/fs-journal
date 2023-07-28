@@ -7,11 +7,12 @@
 
 2. The `SPA` acronym stands for what?
 
-  > | ANSWER HERE |
+  > Single Page application
 
 3. What are some of the advantages/uses of a `SPA` over a traditional one?
 
-  > | ANSWER HERE |
+  > + Faster resources loaded on launch dont need to be reloaded
+  - More work for the browser, risk of memory leaks
 
 4. What does the `onMounted` method in Vue do?
 
@@ -19,11 +20,11 @@
 
 5. What is the `v-model` attribute in Vue for, and when might you use it?
 
-  > | ANSWER HERE |
+  > v-model is used to interact with a referenced value, used commonly for forms
 
 6. What is the package.json file used for?
 
-  > | ANSWER HERE |
+  > Contains descriptive and functional metadata about a project, such as a name, and dependencies.
 
 7. Which Vue attributes(directives) could you use to conditionally render elements on a page?
 
@@ -35,4 +36,8 @@
 
 9. What is the `<slot>` element and what is it used for?
 
-  > | ANSWER HERE |
+  > a element you can slot different info into <slot name="header"></slot> <slot name="body"></slot>
+  <ModalComponent>
+  <template #header>Create Album</template>
+  <template #body> <CreateAlbumForm/></template>
+  </ModalComponent>
