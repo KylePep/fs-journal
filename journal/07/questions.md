@@ -3,7 +3,7 @@
 1. Describe the two ways to bind Data in Vue?
 
   > with the colons :src="data.data" -- Binding the attribute to the data
-  v-model  -- **Expand**
+  v-model  -- 
 
 2. The `SPA` acronym stands for what?
 
