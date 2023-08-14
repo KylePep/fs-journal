@@ -83,3 +83,107 @@ foreach(string name in names)
   Console.WriteLine($" My name is {name}")
 }
 
+
+
+bcw Create dotnet-auth
+comment line in Startup.cs - cats_api_csharp for reference
+
+namespace ... With name space being used in a given file it'll be accessible to other files using the same namespace
+
+right click new new C# class
+
+Cat.cs
+
+namespace cats_api_csharp.Models;
+
+public class Cat
+{
+  ---Code snippet prop ---
+  public string Name { get; set; }
+
+  public int Age { get; set; }
+
+  public bool HasTail { get; set; }
+
+  public double NumberOfLegs { get; set; }
+
+  <!-- Constructor -->
+  <!--  -->
+  public Cat(string name, int age, bool hasTail, double numberOfLegs) 
+  {
+      Name = name;
+      Age = age;
+      HasTail = hasTail;
+      NumberOfLegs = numberOflegs;
+  }
+}
+
+<!--  -->
+new c# ApiController -- CatsController.cs
+
+[Route("api/[Controller]")]
+this takes CatsController and puts !cats!(Controller) in lower case and replaces Controller
+
+localhost7045
+need to continue past error
+url/swagger will take you to automatic breakdown of api or link
+
+public class CatsController : ControllerBase
+{
+
+  private readonly CatsService _catsService; --- ctrl + dot => can auto genterate line 136-139
+
+  public CatsController(CatsService catsService)
+  {
+    _catsService = catsService;
+  }
+
+
+  [HttpGet]
+  public ActionResult<List<Cat>> GetCats()  -- ActionResult is what allows Ok and BadRequest to happen or be accessible
+  {
+    try
+    {
+      List <Cat> cats = _catsService.GetCats()
+      return Ok();
+    }
+    catch(Exception e)
+    {
+
+      return BadRequest(e.Message);
+    }
+  }
+}
+
+<!--  -->
+New Class CatsService
+
+public class CatsService
+{
+
+  private readonly CatsRepository _catsRepository; crl+. generate
+
+  internal List<Cat> getCats()
+  {
+    List<Cat> cats = _catsRepository.GetCats()
+    {
+    return cats;
+    }
+  }
+}
+
+<!-- -->
+New Class CatsRepository
+
+public class CatsRepository
+{
+  private readonly List<Cat> Cats = new List<Cat>();
+
+
+}
+
+Error Dependency Injection
+
+Startup.cs -- needs to build the service and repository
+
+copy and replace the accounts repository and service .AddScoped lines
