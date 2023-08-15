@@ -85,3 +85,7 @@ internal List<car> GetCars()
 !! Dont forget to add services.AddScoped to Startup.cs !!
 
 paramiterize data instead of ${} @carId
+
+for things that dont result in null you need a ? in the model. for the value
+
+then in the service you can use ??  in c# instead of a || like in js

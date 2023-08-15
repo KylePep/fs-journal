@@ -9,7 +9,7 @@
 
 03. What is the method that returns an instance of a class, yet it has no return type?
 
-  > Void
+  > The contructor of a class
 
 05. In the Car example what is the access modifier of the `Start()` method?
 
