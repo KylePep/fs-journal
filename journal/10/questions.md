@@ -37,7 +37,7 @@
 
 08. In a SQL table, what is the difference between information in a row and information in a column?
 
-  > | ANSWER HERE |
+  > columns are the different keys or attribute data is organized by, the rows are the actual peices of data with all of those value pairs
 
 09. Demonstrate the necessary SQL for creating a table called `characters` with the values `name, age, description` as strings, and an `int` id.
 
