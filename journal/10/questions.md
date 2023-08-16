@@ -41,8 +41,13 @@
 
 09. Demonstrate the necessary SQL for creating a table called `characters` with the values `name, age, description` as strings, and an `int` id.
 
-  > | ANSWER HERE |
+  >  CREATE TABLE characters(
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    age VARCHAR(255) NOT NULL,
+    description VARCHAR(255) NOT NULL,
+    Age SMALLINT UNSIGNED
+ )default charset UTF8 COMMENT '';
 
 10. In SQL how can you query more than a single table? Provide an example.
 
-  > | ANSWER HERE |
+  > SELECT name FROM capybaras, cars;
