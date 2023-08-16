@@ -89,3 +89,28 @@ paramiterize data instead of ${} @carId
 for things that dont result in null you need a ? in the model. for the value
 
 then in the service you can use ??  in c# instead of a || like in js
+
+<!-- Full Stack -->
+
+Fill out the appsettings.Development.json -- also copy it from graigslist and send it to myself using slack
+
+Fill out env.js --- save this too
+
+Verify Log in --- Get bearer token
+--Failed
+change the baseUrl to the correct 7045 instead of 3000
+--Still Faied
+needs an s - https://localhost7045
+
+Creating Table
+** SQL ENUM **
+    category Enum('misc','cats','dogs','games','gachamn') Default 'misc',
+** SQL Creator Id **  
+  creatorId VARCHAR(255) NOT NULL, --- Thats it for now
+** Foreign Key ** 
+  FOREIGN KEY(creatorId) REFERENCES accounts(id) 
+  FOREIGN KEY(creatorId) REFERENCES accounts(id) ON DELETE CASCADE -- When the account is deleted, it deletes all of the would be orphan data.
+
+!! Floating executes are bad. If you see an execute in the middle of a block, thats a problem !!
+
+
