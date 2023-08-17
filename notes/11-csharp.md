@@ -178,8 +178,6 @@ New Class CatsRepository
 public class CatsRepository
 {
   private readonly List<Cat> Cats = new List<Cat>();
-
-
 }
 
 Error Dependency Injection

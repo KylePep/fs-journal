@@ -114,3 +114,196 @@ Creating Table
 !! Floating executes are bad. If you see an execute in the middle of a block, thats a problem !!
 
 
+** Repository CreatorID **
+
+Needs to create a new private read only in the controller, that connects it to the Auth0Provider
+(Ctr + .) -- Add parameters, adds it to the existing service call
+
+Need to async await the method
+
+Wrap the ActionResult<> in Task<>
+
+** Auth Decorator **
+[Authorize] applys to the first method right beneath it. Requires Log in 
+[httpPost]
+
+
+SELECT 
+album *,
+account*
+FROM albums
+JOIN accounts
+ON accounts.id = album.creatorId;
+
+------------------I wasn't paying attention for the first bit of this, I believe it was a profile built into account and profile built onto album
+
+Select
+alb.*,
+acc.*
+FROM albums alb
+JOIN accounts acc ON acc.id = alb.creatorId
+
+LIST<Album> albums = _db.Query<Album, Profile, Album>(
+  sql,
+  (album, profile) => {
+    album.Creator = profile;
+    return album; 
+  }
+).ToList();
+return albums;
+
+added profile to class
+public Profile Creator { get; set; }
+
+Profile its self was build as a public class on account
+
+public class Profile {
+
+}
+
+
+<!-- SECTION Many to Many -->
+Table refrences the two different Ids from the two different Tables with the foreign key they are referencing, with an ON DELETE CASCADE also.
+
+<!-- Data Model -->
+-Id-- int
+-AlbumId -- int
+-AccountId -- string
+
+Create new class inside of Collabortor Model
+
+<!-- Theres a better way -->
+public class ProfileCollaboration
+{
+  int CollaborationId
+  +
+  Everything from profile
+}
+<!-- Better way -->
+public class ProfileCollaboration : Profile
+{
+  int CollaborationId
+  <!-- The profile inheritence will bring in everything that was otherwise typed out. -->
+  <!-- +
+  Everything from profile -->
+}
+
+public class Account : Profile
+{
+  public String Email {get; Set;}
+  inherits all of the same stuff from Profile
+}
+
+<!-- Controller -->
+[Post]
+-With Auth-
+-Same-
+
+--Starting in ablums controller
+[HttpGet ("{albumId}/collaborators")]
+public ActionResult<List<ProfileCollaboration>> GetcollaboratorsByAlbumId(int albumId)
+{
+  trycatch
+  {
+    List<ProfileCollaboration>
+  }
+}
+
+[HttpGet ("{albumId}/collaborators")]
+public ActionResult<List<Collaborator>> GetcollaboratorsByAlbumId(int albumId)
+{
+  trycatch
+  {
+    List<Collaborators>
+  }
+}
+
+
+<!-- Service -->
+[Post]
+-Same-
+
+[GET]
+-Send to repository
+
+<!-- Repository -->
+[Post]
+Frankenstein
+-int cId = _db.Executescalar<int>(sql, cData)
+cData.id = cId
+return cData
+
+[GET]
+string sql = @"
+SELECT
+*
+FROM collaborators
+WHERE id = @albumId
+;";
+
+List<Collaborator> collaborators = _db.Query<Collaborator>(sql, new{albumId}).ToList();
+return collaborators;
+sql = @"
+SELECT
+collab.*,
+acc.*
+FROM collaborators collab
+JOIN accounts acc ON acc.id = collab.accountId
+WHERE collab.albumId = @albumId
+;";
+
+LIST<ProfileCollaboration> collaborators = _db.Query<Collaborator, ProfileCollaboration, ProfileCollaboration>(
+  sql,
+  (collaborator, profile)=>
+  {
+    profile.collaborationId = collaborator.Id
+    return profile;
+  },
+  new {albumId}).ToList();
+  
+  return collaborators;
+
+
+<!-- Next get -->
+
+public class AblumCollaboration : Album
+{
+  public int collaborationId {get; set;}
+}
+
+-Starting in account controller-
+
+[Auth]
+[Get]
+public async Task<ActionResult<List<AlbumCollaboration>>> GetMyAlbumCollaborations()
+{
+  -trycatch-
+  Account UserInfo = await _authstuff
+  List<AlbumCollaboration> collaborators = _collaboratorsService.GetMyAlbumCollaborations(UserInfo.Id);
+}
+
+-In Collaborators Service-
+
+-Same-
+
+-In Collaborators Repository-
+
+sting sql = @"
+SELECT
+collab.*,
+alb.*
+FROM collaborators collab
+JOIN albums alb ON alb.id = collab.albumId
+WHERE collab.accountId = @userId
+;";
+
+List<AlbumCollaboration> collaborators = _db.Query<Collaborator, AlbumCollaboration, AlbumCollaboration>(
+  sql,
+  (collaborator, album)=>
+  {
+    album.CollaborationId = collaborator.Id;
+    return album;
+  },
+new {userId}).ToList();
+
+return collaboratrors;
