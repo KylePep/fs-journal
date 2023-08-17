@@ -274,7 +274,7 @@ public class AblumCollaboration : Album
 -Starting in account controller-
 
 [Auth]
-[Get]
+[Get ("collaborators")]
 public async Task<ActionResult<List<AlbumCollaboration>>> GetMyAlbumCollaborations()
 {
   -trycatch-
@@ -291,19 +291,54 @@ public async Task<ActionResult<List<AlbumCollaboration>>> GetMyAlbumCollaboratio
 sting sql = @"
 SELECT
 collab.*,
-alb.*
+alb.*,
+acc.*
 FROM collaborators collab
 JOIN albums alb ON alb.id = collab.albumId
+JOIN accounts acc ON acc.id = album.creatorId
 WHERE collab.accountId = @userId
 ;";
 
-List<AlbumCollaboration> collaborators = _db.Query<Collaborator, AlbumCollaboration, AlbumCollaboration>(
+List<AlbumCollaboration> collaborators = _db.Query<Collaborator, AlbumCollaboration, Profile, AlbumCollaboration>(
   sql,
-  (collaborator, album)=>
+  (collaborator, album, profile)=>
   {
     album.CollaborationId = collaborator.Id;
+    album.creator = profile;
     return album;
   },
 new {userId}).ToList();
 
 return collaboratrors;
+
+<!-- SECTION delete -->
+-in Collab Controller-
+
+w/Auth
+[Delete("{collaboratorId}")]
+public async Task<ActionResult<string>> RemoveCollabortor(int collaboratorId)
+-trycatch-
+  Account userInfo = await _authStuff----
+  _collaboratorsService.RemoveCollaborator(collaboratorId, userInfo.Id);
+  return Ok("Collaboration has ended")
+
+-in Collab Service-
+
+Create a getCollabById function only at service level
+  Send to Repositoy
+  Null check
+  
+  Run a select in repository to get back the single collaborator where collaborator = collaboratorId
+
+  Run the getCollabById in the Remove Collab Service layer
+  run a check for ownership
+  send to repository
+
+-in Collab Repository
+  Run Delete FROM collaborators WHERE id = @collaboratorId
+  
+  int rowsAffected = _db.ExecuteScalar<int>(sql, collaboratorId)
+  if(rowsAffected > 1)
+  {
+    throw new Exception("CALL THE POLICE")
+  }
