@@ -342,3 +342,42 @@ Create a getCollabById function only at service level
   {
     throw new Exception("CALL THE POLICE")
   }
+
+  <!-- MONDAY 8/21 -->
+ -Repo Item-- can hold standardized properties that you can bring into all of your Schema's
+
+<!-- NOTE -->
+Control - Backslash on figma to get rid of side bars
+
+-When cloning someones repository-
+  run npm i in the client
+  run dotnet restore in backend
+
+fit content
+
+RepoItem
+  public class RepoItem<T>
+  {
+    public T Id { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+  }
+
+  public class CultMember : RepoItem<int>
+  {
+    other prop
+    other prop
+  }
+
+  <!--  -->
+  You can get userInfo with out needing the [Authorize]
+
+  still needs async, Task and await.
+  This allows you to collect the account data with out locking the data behind a login wall.
+
+  For other functions that dont or cant support the new userId you can do string userId = null in the parameters of the function that is utilizing it.
+
+  This can yield null. So userInfo.id would be trying to drill into null and will break
+  You can throw an elvis opperator in userInfo?.Id
+
+  Obscuring the response, so as not to reveil that the user is potentially onto sensitive data.
